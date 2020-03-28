@@ -7,22 +7,34 @@ class Employee {
   };
 
   getName(){
-      inquirer
-      .prompt([
-        {
-          type: 'input',
-          message: 'Enter Employee Name:',
-          name: 'empName'
-        }
-      ]).then(function({empName}){}
-    };
+    //If no name is entered, it will alert error, else return the name.
+    if (!this.name){
+      console.log('No name, please try again');
+    } else {
+      return this.name
+    }
   };
 
-  getId()
+  getId(){
+    if (!this.id){
+      console.log('No Id, please try again');
+    } else {
+      return this.id
+    }
+  };
 
-  getEmail()
+  getEmail(){
+    if (!this.email){
+      console.log('No Email, please try again');
+    } else {
+      return this.email
+    }
+  };
 
-  getRole()
+  getRole(){};
+};
+
+module.exports = Employee
 
 
 

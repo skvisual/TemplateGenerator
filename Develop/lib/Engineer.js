@@ -1,1 +1,18 @@
-// TODO: Write code to define and export the Engineer class.  HINT: This class should inherit from Employee.
+const Employee = require('./lib/Employee')
+
+class Engineer extends Employee {
+    cosntructor(gitHub) {
+        super(name, Id, Email,);
+        this.gitHub = gitHub ;   
+    };
+    
+    getGitHub(){
+      if (!this.gitHub){
+        console.log('No input, try again');
+      } else {
+        return this.gitHub
+      }  
+    }
+
+};
+  
