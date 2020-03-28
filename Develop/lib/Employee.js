@@ -37,5 +37,6 @@ class Employee {
 module.exports = Employee
 
 
-
+// var employee = new Employee('jason', 123, 'emailaddy')
     
+// console.log(employee)
