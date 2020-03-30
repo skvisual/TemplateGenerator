@@ -23,8 +23,7 @@ class Intern extends Employee {
     } else {
       return "Intern"
     }
-  }
-        
+  }        
 }
 
 
