@@ -13,10 +13,20 @@ class Engineer extends Employee {
     if (!this.gitHub){
       console.log('No input, try again');
     } else {
-      return this.gitHub
+      return "gitHub"
     }  
   }
+
+  getRole(){
+    if (!new Employee){  
+      console.log("error")    
+    } else {
+      return "Engineer"
+    }
+  }
 };
+
+module.exports = Engineer
   
 // var engineer = new Engineer('name', 'id','email','github username');
 
