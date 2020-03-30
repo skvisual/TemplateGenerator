@@ -13,57 +13,141 @@ const render = require("./lib/htmlRenderer");
 ​
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
+class Team {
+  constructor(){
 
-const prompts = [
-  {
-    type: 'input',
-    message: 'Enter display name:',
-    name: 'name'
-  },
-  {
-    type: 'input',
-    message: 'Enter ID number:',
-    name: 'id'
-  },
-  {
-    type: 'input',
-    message: 'Enter e-mail address:',
-    name: 'email'
-  },
-  {
-    input: 'rawList',
-    message: 'Assign employee role:',
-    name: 'role',
-    choices: ['Manager', 'Engineer', 'Intern']
-  },
-  {
-    type: 'input',
-    message: 'Please enter office number:',
-    name: 'officeNumber',
-    when: (function(answers){
-      return answers.role === "Manager";
+
+  }
+
+
+  start(){
+    inquirer
+    .prompt([
+      {
+        type: 'rawlist',
+        message: 'Select an action:',
+        name: 'action',
+        choices: [
+          'Add a Manager',
+          'Add an Engineer',
+          'Add an Intern',
+          'Exit Application'
+        ]
+      },
+    ]).then(({ action }) => {
+      switch (action) {
+        case 'Add a Manager':
+          this.addManager();
+          break;
+        case 'Add an Engineer':
+          this.addEngineer();
+          break;
+        case 'Add an Intern':
+          this.addIntern();
+          break;
+        default:
+          process.exit();
+      }
+    });
+  }
+
+  addManager(){
+    inquirer
+    .prompt([
+      {
+        type: 'input',
+        message: 'Enter Name:',
+        name: 'name'      
+      },
+      {
+        type: 'input',
+        message: 'Enter ID #:',
+        name: 'id'
+      },
+      {
+        type: 'input',
+        message: 'Enter e-mail address:',
+        name: 'email'
+      },
+      {
+        type: 'input',
+        message: 'Enter office phone number:',
+        name: 'officeNumber'
+      }
+    ]).then(async ({ name, id, email, officeNumber }) => {
+      
+      
+      
+      this.start()
     })
-  },
-  {
-    type: 'input',
-    message: 'Please enter gitHUb username:',
-    name: 'gitHub',
-    when: (function(answers){
-      return answers.role === "Engineer";
-    })
-  },
-  {
-    type: 'input',
-    message: 'Please enter school name:',
-    name: 'school',
-    when: (function(answers){
-      return answers.role === "Intern";
+  };
+
+  addEngineer(){
+    inquirer
+    .prompt([
+      {
+        type: 'input',
+        message: 'Enter Name:',
+        name: 'name'      
+      },
+      {
+        type: 'input',
+        message: 'Enter ID #:',
+        name: 'id'
+      },
+      {
+        type: 'input',
+        message: 'Enter e-mail address:',
+        name: 'email'
+      },
+      {
+        type: 'input',
+        message: 'Enter GitHub username',
+        name: 'gitHub'
+      }    
+    ]).then(async ({ name, id, email, gitHub }) => {
+
+
+      this.start()
     })
   }
-];
 
-// inquirer
-// .prompt(questions)
+  addIntern(){
+    inquirer
+    .prompt([
+      {
+        type: 'input',
+        message: 'Enter Name:',
+        name: 'name'      
+      },
+      {
+        type: 'input',
+        message: 'Enter ID #:',
+        name: 'id'
+      },
+      {
+        type: 'input',
+        message: 'Enter e-mail address:',
+        name: 'email'
+      },
+      {
+        type: 'input',
+        message: 'Enter school name:',
+        name: 'school'
+      },
+    ]).then(async ({ name, id, email, school }) => {
+      
+
+      this.start()
+    })
+  };
+
+
+
+};
+
+  
+
 
 
 

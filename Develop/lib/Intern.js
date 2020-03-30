@@ -16,7 +16,19 @@ class Intern extends Employee {
           return this.school;
         }
     };
-};
+
+    getRole(){
+      if (!new Employee){  
+        console.log("error")    
+      } else {
+        return "Intern"
+      }
+    }
+        
+}
+
+
+module.exports = Intern
 
 // var intern = new Intern('name', 'id', 'email', 'school');
 

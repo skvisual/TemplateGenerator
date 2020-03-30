@@ -20,7 +20,18 @@ class Manager extends Employee {
             return this.officeNumber;
           }      
     }  
+
+    getRole(){
+      if (!new Employee){  
+        console.log("error")    
+      } else {
+        return "Manager"
+      }
+    }
+  
 };
+
+module.exports = Manager
 
 // var test2 = new Manager('name', 'id', 'email','office')
 // console.log(test2)

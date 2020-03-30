@@ -31,12 +31,13 @@ class Employee {
     }
   };
 
-  getRole(){};
+  getRole(){
+    if (!new Employee){
+      console.log('Error. Please try again');
+    } else {
+      return "Employee"
+    }
+  };
 };
 
 module.exports = Employee
-
-
-// var employee = new Employee('jason', 123, 'emailaddy')
-    
-// console.log(employee)
