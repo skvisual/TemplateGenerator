@@ -20,11 +20,7 @@ class Manager extends Employee {
   }  
 
   getRole(){
-    if (!new Employee){  
-      console.log("error")    
-    } else {
-      return "Manager"
-    }
+    return "Manager"
   }
   
 };

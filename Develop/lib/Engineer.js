@@ -18,13 +18,11 @@ class Engineer extends Employee {
   }
 
   getRole(){
-    if (!new Employee){  
-      console.log("error")    
-    } else {
+    
       return "Engineer"
     }
-  }
-};
+}
+
 
 module.exports = Engineer
   

@@ -32,11 +32,9 @@ class Employee {
   };
 
   getRole(){
-    if (!new Employee){
-      console.log('Error. Please try again');
-    } else {
+    
       return "Employee"
-    }
+  
   };
 };
 
