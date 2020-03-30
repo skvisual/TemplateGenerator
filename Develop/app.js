@@ -15,7 +15,7 @@ const render = require("./lib/htmlRenderer");
 // and to create objects for each team member (using the correct classes as blueprints!)
 class Team {
   constructor(){
-
+    
 
   }
 
