@@ -10,8 +10,6 @@ const html = [];
 
 const render = require("./lib/htmlRenderer");
 
-
-
 function start(){
   const questions = [
   {
@@ -50,8 +48,8 @@ function start(){
 
   {
       type: "input",
-      message: "Please enter the gitHub username",
-      name: "gitHub",
+      message: "Please enter the GitHub username",
+      name: "github",
       when: function(answers){
       return answers.role === "Engineer";
       }
@@ -75,7 +73,7 @@ function start(){
          html.push(manager);
          break
       case "Engineer":
-          const engineer = new Engineer(answers.name, parseInt(answers.id), answers.email, answers.gitHub);
+          const engineer = new Engineer(answers.name, parseInt(answers.id), answers.email, answers.github);
           html.push(engineer);
           break
       case "Intern":
