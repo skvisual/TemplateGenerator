@@ -1,0 +1,37 @@
+.jumbo {
+    background-color: peru;
+}
+
+.body {
+    background-color: darkgrey;
+}
+
+.Header {
+    background-color: grey;
+}
+
+.headerText{
+    font-size: 54px;
+}
+
+.body {
+    background-color: darkgrey;
+}
+
+.manHeader {
+    background-color: grey;
+}
+
+.manBody {
+    background-color: peru;
+}
+
+.manCard {
+    padding: 15px;
+    background-color: darkgrey;
+    border: none;
+}
+
+.headerText{
+    font-size: 60px;
+}
