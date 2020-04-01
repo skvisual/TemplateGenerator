@@ -35,3 +35,8 @@
 .headerText{
     font-size: 60px;
 }
+
+.inputItem {
+    background-color: darkgrey;
+    color: white;
+}
