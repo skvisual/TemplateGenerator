@@ -50,13 +50,30 @@ function start(){
   {
       type: 'input',
       message: 'Please enter the employee ID number',
-      name: 'id'
+      name: 'id',
+      validate : answer => {
+        const valid = answer.match(`^[0-9]*$`);
+          if (valid){
+            return true
+          } else {
+            return 'ID MUST BE A NUMBER!'
+          }          
+      }
+          
   },
-
   {
       type: 'input',
       message: 'Please enter the email',
-      name: 'email'
+      name: 'email',
+      validate: answer => {
+        const pass = answer.match(
+          /\S+@\S+\.\S+/
+        );
+        if (pass) {
+          return true;
+        }
+        return "Please enter a valid email address";
+      }
   },
 
   {
